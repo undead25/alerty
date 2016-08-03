@@ -1,4 +1,5 @@
-# Alerty
+# Alerty [![npm](https://img.shields.io/npm/v/alerty.svg?style=flat-square)](https://www.npmjs.org/package/alerty)
+
 A simple, light and pretty pure javascript for developing browser dialogs and notifications which is following Google's Material Design guidelines. Obviously, it is responsive and no need other library.
  
 ## Usage
@@ -6,11 +7,16 @@ you can install alerty with npm
 ```bash
 npm install alerty
 ```
+or with bower
+```bash
+bower install alerty
+```
+
 Alternatively, download the package and reference the JavaScript and CSS files manually:
 
 ```html
-<script src="dist/alerty.min.js"></script>
-<link rel="stylesheet" type="text/css" href="dist/alerty.min.css">
+<script src="dist/js/alerty.min.js"></script>
+<link rel="stylesheet" type="text/css" href="dist/css/alerty.min.css">
 ```
 
 ## Examples
