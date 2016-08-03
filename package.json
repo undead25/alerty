@@ -1,0 +1,39 @@
+{
+  "name": "alerty",
+  "version": "0.0.1",
+  "description": "A simple, light and pretty pure javascript for developing browser dialogs and notifications which is following Google's Material Design guidelines. Obviously, it is responsive and no need other library",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/undead25/alerty.git"
+  },
+  "keywords": [
+    "alertyjs",
+    "alerty",
+    "alert",
+    "confirm",
+    "dialog",
+    "toasts",
+    "prompt"
+  ],
+  "author": "undead25",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/undead25/alerty/issues"
+  },
+  "homepage": "https://github.com/undead25/alerty#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-header": "^1.8.7",
+    "gulp-jshint": "^2.0.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.4",
+    "jshint": "^2.9.2",
+    "postcss-background-rgba": "^1.0.3",
+    "postcss-color-rgba-fallback": "^2.2.0"
+  }
+}
