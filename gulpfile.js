@@ -84,10 +84,10 @@ gulp.task('watch',['sass', 'js'], function() {
 
 gulp.task('server', function() {
   browserSync.init({
-    files: ['./dist/**','./test/*.html'],
+    files: ['./dist/**','./example/*.html'],
     port: '8888',
     server: {
-      baseDir: ['dist', 'test']
+      baseDir: ['dist', 'example']
     }
   })
 });

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <title>Alerty - RequireJS</title>
+  <link rel="stylesheet" href="css/alerty.css">
+  <style>
+    *{box-sizing: border-box; }
+    html {font-size: 16px; font-family: sans-serif; height: 100%; }
+    body {margin: 0; padding: 0; overflow-x: hidden; overflow-y: scroll; position: relative;}
+    .demo {width: 80%; margin: 0 auto; margin-top: 100px;  text-align: center;}
+    .btn {font-size:14px; width:88px;text-align:center;border:1px solid #ddd; display: inline-block; height:36px;line-height:36px; cursor:pointer; margin: 10px 0;}
+  </style>
+</head>
+<body>
+  <div class="demo">
+    <a class="btn" type="button" id="test1">alert</a>
+    <a class="btn" type="button" id="test2">toasts</a>
+    <a class="btn" type="button" id="test3">confirm</a>
+    <a class="btn" type="button" id="test4">prompt</a>
+  </div>
+  <script src="http://cdn.bootcss.com/require.js/2.2.0/require.min.js" data-main="r_main"></script>
+  <script>
+    requirejs.config({
+      paths: {
+        alerty: '/js/alerty'
+      }
+    });
+  </script>
+</body>
+</html>
