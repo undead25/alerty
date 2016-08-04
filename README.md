@@ -56,7 +56,79 @@ alerty.prompt(
   }
 )
 ```
-Documentation & Examples
+
+## API
+-  ### alerty.toasts(content[, opts], callback)
+
+|param|type|description|
+|-|-|-|
+|content|string|message to display|
+|opts|object|options, optional|
+|callback|function|callback after alerty closed|
+
+**opts:**
+
+|name|type|default|description|
+|-|-|-|-|
+|place|string|'bottom'|'top' can be choosed|
+|bgColor|string|'#323232'|background color of dialog body|
+|fontColor|string|'#fff'|font color of dialog message|
+|time|number|2000|time delay for dialog auto closed|
+
+----------
+
+- ### alerty.alert(content[, opts], onOk)
+
+|param|type|description|
+|-|-|-|
+|content|string|message to display|
+|opts|object|options, optional|
+|onOk|function|callback after click ok button|
+
+**opts:**
+
+|name|type|default|description|
+|-|-|-|-|
+|title|string|''|title of dialog|
+|okLabel|string|确定|ok button text|
+
+----------
+
+- ### alerty.confirm(content[, opts], onOk, onCancel)
+
+|param|type|description|
+|-|-|-|
+|content|string|message to display|
+|opts|object|options|
+|onOk|function|callback after click ok button|
+|onCancel|function|callback after click cancel button|
+
+**opts:**
+
+|name|type|default|description|
+|-|-|-|-|
+|title|string|''|title of dialog|
+|okLabel|string|确定|ok button text|
+|okLabel|string|取消|cancel button text|
+
+----------
+
+- ### alerty.prompt(content[, opts], onOk, onCancel)
+
+|param|type|description|
+|-|-|-|
+|content|string|message to display|
+|opts|object|options|
+|onOk|function|callback after click ok button, argument value, like above example|
+|onCancel|function|callback after click cancel button|
+
+**opts:**
+
+|name|type|default|description|
+|-|-|-|-|
+|title|string|''|title of dialog|
+|okLabel|string|确定|ok button text|
+|okLabel|string|取消|cancel button text|
 
 ## Browser support
 Alerty is tested and works in:
