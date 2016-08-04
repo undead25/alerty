@@ -58,10 +58,10 @@ alerty.prompt(
 ```
 
 ## API
--  ### alerty.toasts(content[, opts], callback)
+### alerty.toasts(content[, opts], callback)
 
 |param|type|description|
-|-|-|-|
+|-----|----|-----------|
 |content|string|message to display|
 |opts|object|options, optional|
 |callback|function|callback after alerty closed|
@@ -77,7 +77,7 @@ alerty.prompt(
 
 ----------
 
-- ### alerty.alert(content[, opts], onOk)
+### alerty.alert(content[, opts], onOk)
 
 |param|type|description|
 |-|-|-|
@@ -94,7 +94,7 @@ alerty.prompt(
 
 ----------
 
-- ### alerty.confirm(content[, opts], onOk, onCancel)
+### alerty.confirm(content[, opts], onOk, onCancel)
 
 |param|type|description|
 |-|-|-|
@@ -113,7 +113,7 @@ alerty.prompt(
 
 ----------
 
-- ### alerty.prompt(content[, opts], onOk, onCancel)
+### alerty.prompt(content[, opts], onOk, onCancel)
 
 |param|type|description|
 |-|-|-|
