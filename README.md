@@ -69,7 +69,7 @@ alerty.prompt(
 **opts:**
 
 |name|type|default|description|
-|-|-|-|-|
+|----|----|-------|-----------|
 |place|string|'bottom'|'top' can be choosed|
 |bgColor|string|'#323232'|background color of dialog body|
 |fontColor|string|'#fff'|font color of dialog message|
@@ -80,7 +80,7 @@ alerty.prompt(
 ### alerty.alert(content[, opts], onOk)
 
 |param|type|description|
-|-|-|-|
+|-----|----|-----------|
 |content|string|message to display|
 |opts|object|options, optional|
 |onOk|function|callback after click ok button|
@@ -88,7 +88,7 @@ alerty.prompt(
 **opts:**
 
 |name|type|default|description|
-|-|-|-|-|
+|----|----|-------|-----------|
 |title|string|''|title of dialog|
 |okLabel|string|确定|ok button text|
 
@@ -97,7 +97,7 @@ alerty.prompt(
 ### alerty.confirm(content[, opts], onOk, onCancel)
 
 |param|type|description|
-|-|-|-|
+|-----|----|-----------|
 |content|string|message to display|
 |opts|object|options|
 |onOk|function|callback after click ok button|
@@ -106,7 +106,7 @@ alerty.prompt(
 **opts:**
 
 |name|type|default|description|
-|-|-|-|-|
+|----|----|-------|-----------|
 |title|string|''|title of dialog|
 |okLabel|string|确定|ok button text|
 |okLabel|string|取消|cancel button text|
@@ -116,7 +116,7 @@ alerty.prompt(
 ### alerty.prompt(content[, opts], onOk, onCancel)
 
 |param|type|description|
-|-|-|-|
+|-----|----|-----------|
 |content|string|message to display|
 |opts|object|options|
 |onOk|function|callback after click ok button, argument value, like above example|
@@ -125,7 +125,7 @@ alerty.prompt(
 **opts:**
 
 |name|type|default|description|
-|-|-|-|-|
+|----|----|-------|-----------|
 |title|string|''|title of dialog|
 |okLabel|string|确定|ok button text|
 |okLabel|string|取消|cancel button text|
