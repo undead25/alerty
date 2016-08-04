@@ -129,6 +129,9 @@ alerty.prompt(
 |title|string|''|title of dialog|
 |okLabel|string|确定|ok button text|
 |okLabel|string|取消|cancel button text|
+|inputType|string|'text'|input type, such as 'password', 'email'|
+|inputPlaceholder|'text'|''|input placeholder text|
+|inputValue|'text'|''|default input value|
 
 ## Browser support
 Alerty is tested and works in:
