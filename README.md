@@ -20,6 +20,17 @@ Alternatively, download the package and reference the JavaScript and CSS files m
 ```
 
 ## Examples
+
+you can run example local with gulp if node, npm, and gulp has been installed:
+
+```bash
+cd alerty
+gulp
+```
+or test it on [jsfiddle](https://jsfiddle.net/fzwporfe/)
+
+
+## Usage
 >For alert dialog
 
 ```js

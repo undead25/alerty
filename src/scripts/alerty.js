@@ -324,8 +324,8 @@
       },
 
       // return alerty.prompt();
-      prompt: function(content, opts, callback) {
-        Dialog.setup('prompt', content, opts, callback);
+      prompt: function(content, opts, onOk, oncancel) {
+        Dialog.setup('prompt', content, opts, onOk, oncancel);
       }
     };
   };
