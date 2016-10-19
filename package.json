@@ -1,6 +1,7 @@
 {
   "name": "alerty",
   "version": "0.0.1",
+  "main": "alerty.js",
   "description": "A simple, light and pretty pure javascript for developing browser dialogs and notifications which is following Google's Material Design guidelines. Obviously, it is responsive and no need other library",
   "repository": {
     "type": "git",

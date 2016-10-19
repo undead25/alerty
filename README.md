@@ -7,6 +7,9 @@ you can install alerty with npm
 ```bash
 npm install alerty
 ```
+```js
+var alerty = require('alerty');
+```
 or with bower
 ```bash
 bower install alerty
