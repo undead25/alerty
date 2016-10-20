@@ -21,7 +21,8 @@ var config = {
   },
   dist: {
     css: './dist/css',
-    js: './dist/js'
+    js: './dist/js',
+    js: './'
   },
   autoprefix: {
     browsers: [
