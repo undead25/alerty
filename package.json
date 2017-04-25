@@ -1,6 +1,6 @@
 {
   "name": "alerty",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "alerty.js",
   "description": "A simple, light and pretty pure javascript for developing browser dialogs and notifications which is following Google's Material Design guidelines. Obviously, it is responsive and no need other library",
   "repository": {
@@ -23,18 +23,20 @@
   },
   "homepage": "https://github.com/undead25/alerty#readme",
   "devDependencies": {
-    "browser-sync": "^2.13.0",
+    "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-clean-css": "^2.0.10",
-    "gulp-header": "^1.8.7",
-    "gulp-jshint": "^2.0.1",
-    "gulp-postcss": "^6.1.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.4.0",
+    "gulp-header": "^1.8.8",
+    "gulp-jshint": "^2.0.4",
+    "gulp-postcss": "^6.4.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
-    "gulp-uglify": "^1.5.4",
-    "jshint": "^2.9.2",
-    "postcss-background-rgba": "^1.0.3",
-    "postcss-color-rgba-fallback": "^2.2.0"
-  }
+    "gulp-sass": "^3.1.0",
+    "gulp-typescript": "^3.1.6",
+    "gulp-uglify": "^2.1.2",
+    "http-server": "^0.9.0",
+    "postcss-background-alpha": "^1.0.3",
+    "typescript": "^2.2.2"
+  },
+  "types": "./alerty.d.ts"
 }
