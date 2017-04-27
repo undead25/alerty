@@ -28,8 +28,8 @@ export function hasClass(el: HTMLElement, cls: string): boolean {
 export function addEvent(el: HTMLElement, type: string, func: () => any): void {
   if (el.addEventListener) {
     el.addEventListener(type, func, false);
-  } else if (el.attachEvent) {
-    el.attachEvent('on' + type, func);
+  } else if (el['attachEvent']) {
+    el['attachEvent']('on' + type, func);
   } else {
     el['on' + type] = func;
   }
@@ -38,8 +38,8 @@ export function addEvent(el: HTMLElement, type: string, func: () => any): void {
 export function removeEvent(el: HTMLElement, type: string, func: () => any): void {
   if (el.removeEventListener) {
     el.removeEventListener(type, func, false);
-  } else if (el.detachEvent) {
-    el.detachEvent('on' + type, func);
+  } else if (el['detachEvent']) {
+    el['detachEvent']('on' + type, func);
   } else {
     delete el['on' + type];
   }
