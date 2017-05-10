@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/undead25/alerty.git"
   },
+  "scripts": {
+    "start": "gulp"
+  },
   "keywords": [
     "alertyjs",
     "alerty",
@@ -29,7 +32,6 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^2.4.0",
-    "gulp-header": "^1.8.8",
     "gulp-jshint": "^2.0.4",
     "gulp-postcss": "^6.4.0",
     "gulp-rename": "^1.2.2",

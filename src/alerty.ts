@@ -1,16 +1,14 @@
 import { addClass } from './util';
 
 class Alerty {
-  constructor() {
-    const a: HTMLElement = document.getElementById('test');
-    addClass(a, 'abc');
+  private defaultConfig = {
+    okLabel: '\u786e\u5b9a',
+    cancelLabel: '\u53d6\u6d88',
+    time: 2000
   }
 
-  public a() {
-    return new Promise((resolve, reject) => {
-      setTimeout(resolve, 3000, 'done');
-    });
-  }
+  private template
+  constructor() { }
 }
 
 export default Alerty;
