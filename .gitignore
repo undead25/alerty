@@ -4,3 +4,4 @@
 .LSOverride
 
 node_modules
+*.log
