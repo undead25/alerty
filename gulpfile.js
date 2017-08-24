@@ -11,7 +11,7 @@ const postcss = require('gulp-postcss');
 const cleancss = require('gulp-clean-css');
 const backgroundRgba = require('postcss-background-alpha');
 const colorRgba = require("postcss-color-rgba-fallback");
-// const browserSync = require('browser-sync').create();
+const browserSync = require('browser-sync').create();
 
 const packRollup = (options) => {
   let plugins = [
@@ -25,11 +25,12 @@ const packRollup = (options) => {
   return rollup({
     entry: "./src/alerty.ts",
     plugins,
-  }).then((bundle) => {
+  }).then(bundle => {
     bundle.write({
       format: options.format,
       moduleName: "Alerty",
-      dest: options.dest
+      dest: options.dest,
+      footer: `window.alerty = new Alerty()`
     });
   })
 }
@@ -83,4 +84,14 @@ gulp.task('watch', () => {
   
 })
 
-gulp.task('default', ['dev', 'prod', 'styles', 'watch']);
+gulp.task('server', () => {
+  browserSync.init({
+    files: ['./lib/**','./example/*.html'],
+    port: '8888',
+    server: {
+      baseDir: ['./', 'example']
+    }
+  })
+});
+
+gulp.task('default', ['dev', 'prod', 'styles', 'server', 'watch']);

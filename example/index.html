@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
   <title>Alerty</title>
-  <link rel="stylesheet" href="css/alerty.css">
+  <link rel="stylesheet" href="../lib/alerty.css">
   <style>
     *{box-sizing: border-box; }
     html {font-size: 16px; font-family: sans-serif; height: 100%; }
@@ -23,10 +23,10 @@
     <h3><a href="seaJS.html">SeaJS example here</a></h3>
   </div>
 
-  <script src="js/alerty.js"></script>
+  <script src="../lib/alerty.js"></script>
   <script>
     document.getElementById('test1').onclick = function () {
-      alerty.alert('123', {title: 'Info', time:2222}, function(){alert('callback')})
+      alerty.alert('123', {title: 'INFO'}).then(() => console.log('aaa'))
     }
     document.getElementById('test2').onclick = function () {
       alerty.toasts('123', {bgColor: '#ccc', fontColor: '#000'}, function(){alert('toasts callback')})
