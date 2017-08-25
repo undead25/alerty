@@ -1,11 +1,11 @@
-$dark: #1b1919 !default;
+$dark: rgba(0, 0, 0, .87) !default;
 $white: #fff !default;
 $primary: #4285f4 !default;
-$gray: #635a56 !default;
-$gray-lighter: #d9d6d4 !default;
+$gray: rgba(0, 0, 0, .54) !default;
+$gray-light: rgba(0, 0, 0, .38) !default;
+$gray-lighter: rgba(0, 0, 0, .12) !default;
 
-$font-size-base: 16px !default;
-$font-size-md: 14px !default;
+$font-size-base: 14px !default;
 
 $zindex-alerty: 1060 !default;
 
@@ -22,7 +22,7 @@ $alerty-toasts-height: 48px;
 
 $shadow-first-color: rgba(0, 0, 0, 0.2) !default;
 $shadow-second-color: rgba(0, 0, 0, 0.14) !default;
-$shadow-third-color: rgba(0, 0, 0, 0.12) !default;
+$shadow-third-color: $gray-lighter !default;
 
 @mixin shadow-24dp() {
   box-shadow: 0px 11px 15px -7px $shadow-first-color,
@@ -34,6 +34,8 @@ $shadow-third-color: rgba(0, 0, 0, 0.12) !default;
   color: $dark;
   z-index: $zindex-alerty + 1;
   border-radius: $alerty-radius;
+  max-width: 768px;
+  min-width: 290px;
   width: 400px;
   background-color: $white;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -93,6 +95,17 @@ $shadow-third-color: rgba(0, 0, 0, 0.12) !default;
           visibility: visible;
           transform: scaleX(1);
         }
+
+        &:focus {
+          &::placeholder {
+            color: $gray;
+          }
+        }
+
+        &::placeholder {
+          transition: color .25s ease-in;
+          color: $gray-light;
+        }
       }
 
       .input-line {
@@ -114,27 +127,30 @@ $shadow-third-color: rgba(0, 0, 0, 0.12) !default;
     padding: $alerty-action-padding;
     text-align: right;
 
-    [class*="btn-"] {
+    button {
       margin-left: 8px;
       cursor: pointer;
-      color: $dark;
       height: 36px;
       line-height: 36px;
       min-width: 88px;
       text-align: center;
-      outline: none !important;
+      outline: none;
       background-color: transparent;
       display: inline-block;
       border-radius: 2px;
       -webkit-tap-highlight-color: rgba(0,0,0,0.12);
       transition: all .45s cubic-bezier(0.23, 1, 0.32, 1);
+      padding: 0;
+      border: none;
+      font-size: inherit;
+      font-weight: normal;
+      font-family: inherit;
+      color: $dark;
 
-      &:hover {background-color: #ececec;}
+      &:hover, &:focus {background-color: rgba(0, 0, 0, .06);}
     }
     
     .btn-ok {color: $primary;}
-
-    .btn-cancel {color: $gray;}
   }
 
   
@@ -151,7 +167,7 @@ $shadow-third-color: rgba(0, 0, 0, 0.12) !default;
       height: $alerty-toasts-height;
       line-height: $alerty-toasts-height;
       padding: 0 $alerty-content-padding;
-      font-size: $font-size-md;
+      font-size: $font-size-base;
       .alerty-message {color: $white;}
     }
 
@@ -180,13 +196,9 @@ $shadow-third-color: rgba(0, 0, 0, 0.12) !default;
   }
 }
 
-@media all and (max-width: 540px) {
+@media all and (max-width: 640px) {
   .alerty {
-    width: auto;
-    margin-left: 0;
-    margin-right: 0;
-    left: 15px;
-    right: 15px;
+    width: 280px;
   }
 
   .alerty.toasts {
@@ -212,7 +224,7 @@ $shadow-third-color: rgba(0, 0, 0, 0.12) !default;
   transition: background-color .45s cubic-bezier(0.23, 1, 0.32, 1);
 
   &.active {
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .54);
   }
 }
 

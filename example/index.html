@@ -15,18 +15,17 @@
 </head>
 <body>
   <div class="demo">
+    <p>Callback Information: <span id="callback">prepared!</span></p>
     <a class="btn" type="button" id="test1">alert</a>
     <a class="btn" type="button" id="test2">toasts</a>
     <a class="btn" type="button" id="test3">confirm</a>
     <a class="btn" type="button" id="test4">prompt</a>
-    <h3><a href="requireJS.html">RequireJS example here</a></h3>
-    <h3><a href="seaJS.html">SeaJS example here</a></h3>
   </div>
-
   <script src="../lib/alerty.js"></script>
   <script>
+    var $msg = document.getElementById('callback');
     document.getElementById('test1').onclick = function () {
-      alerty.alert('123', {title: 'INFO'}).then(() => console.log('aaa'))
+      alerty.alert('操作已完成！', {title: '提示'}).then(() => $msg.innerHTML = 'ALERT OK!')
     }
     document.getElementById('test2').onclick = function () {
       alerty.toasts('123', {bgColor: '#ccc', fontColor: '#000'}, function(){alert('toasts callback')})
@@ -34,21 +33,13 @@
     document.getElementById('test3').onclick = function () {
       alerty.confirm(
         'Are you sure?', 
-        {title: 'Notes', cancelLabel: 'Cancel', okLabel: 'Confirm'}, 
-        function(){
-          alerty.toasts('this is ok callback', {place: 'top'})
-        },
-        function() {
-          alerty.toasts('this is cancel callback')
-        }
+        {title: 'Notes', cancelLabel: 'Cancel', okLabel: 'Confirm', maskClosable: false}, 
       )
     }
     document.getElementById('test4').onclick = function () {
-      alerty.prompt('this is a prompt dialog', 
-        {inputType: 'text', inputPlaceholder: 'fill the blank', inputValue: 'default value'},
-        function(value){
-          alerty.alert('value you typed is: <b>'+value+'</b>')
-      }, function(){alert('cancel callback')})
+      alerty.prompt(
+        {inputPlaceholder: '请输入密码', inputType: 'password', title: '密码验证'}
+      )
     }
   </script>
 </body>
