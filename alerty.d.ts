@@ -16,4 +16,6 @@ declare namespace Alerty {
     // default value of input
     inputValue?: string;
   }
+
+  type ModalType = 'alert' | 'confirm' | 'prompt';
 }

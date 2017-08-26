@@ -34,12 +34,12 @@
       alerty.confirm(
         'Are you sure?', 
         {title: 'Notes', cancelLabel: 'Cancel', okLabel: 'Confirm', maskClosable: false}, 
-      )
+      ).then(() => $msg.innerHTML = 'You Clicked Confirm', () => $msg.innerHTML = 'You Clicked Cancel')
     }
     document.getElementById('test4').onclick = function () {
-      alerty.prompt(
+      alerty.prompt('',
         {inputPlaceholder: '请输入密码', inputType: 'password', title: '密码验证'}
-      )
+      ).then((value) => $msg.innerHTML = `你输入的是：${value}`).catch(alerty.noop);
     }
   </script>
 </body>
