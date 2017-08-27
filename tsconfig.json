@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
-    "sourceMap": true,
-    "allowJs": true
+    "module": "commonjs"
   },
   "compileOnSave": false,
   "buildOnSave": false

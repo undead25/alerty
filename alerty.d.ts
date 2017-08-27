@@ -7,7 +7,7 @@ declare namespace Alerty {
     title?: string;
     okLabel?: string;
     cancelLabel?: string;
-    time?: number;
+    duration?: number;
     maskClosable?: boolean;
     escClosable?: boolean;
     btnFocus?: boolean;
@@ -15,7 +15,9 @@ declare namespace Alerty {
     inputPlaceholder?: string;
     // default value of input
     inputValue?: string;
+    toastPlace?: string;
+    toastDuration?: number;
   }
 
-  type ModalType = 'alert' | 'confirm' | 'prompt';
+  type ModalType = 'alert' | 'confirm' | 'prompt' | 'toasts';
 }

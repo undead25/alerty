@@ -10,7 +10,6 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const cleancss = require('gulp-clean-css');
 const backgroundRgba = require('postcss-background-alpha');
-const colorRgba = require("postcss-color-rgba-fallback");
 const browserSync = require('browser-sync').create();
 
 const packRollup = (options) => {
@@ -53,9 +52,6 @@ gulp.task('styles', function () {
     }))
     .pipe(postcss([
       backgroundRgba,
-      colorRgba({
-        properties: ["color", "border", "border-color"]
-      })
     ]))
     .pipe(gulp.dest('lib'))
     .pipe(cleancss({ compatibility: 'ie8' }))

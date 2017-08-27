@@ -67,58 +67,58 @@ $shadow-third-color: $gray-lighter !default;
     text-align: justify;
     padding: $alerty-content-padding;
     padding: 24px;
+  }
 
-    .alerty-message {
-      margin: 0;
-      padding: 0;
-      color: $gray;
+  .alerty-message {
+    margin: 0;
+    padding: 0;
+    color: $gray;
+  }
+
+  .alerty-prompt {
+    margin-top: $alerty-prompt-marginTop;
+    text-align: center;
+    position: relative;
+
+    input {
+      width: 100%;
+      height: $alerty-prompt-height;
+      display: inline-block;
+      padding: 6px 0;
+      box-shadow: none;
+      border: none;
+      outline: none;
+      font-size: $font-size-base;
+      color: $dark;
+      border-bottom: 1px solid $gray-lighter;
+
+      &:focus + .input-line{
+        visibility: visible;
+        transform: scaleX(1);
+      }
+
+      &:focus {
+        &::placeholder {
+          color: $gray;
+        }
+      }
+
+      &::placeholder {
+        transition: color .25s ease-in;
+        color: $gray-light;
+      }
     }
 
-    .alerty-prompt {
-      margin-top: $alerty-prompt-marginTop;
-      text-align: center;
-      position: relative;
-
-      input {
-        width: 100%;
-        height: $alerty-prompt-height;
-        display: inline-block;
-        padding: 6px 0;
-        box-shadow: none;
-        border: none;
-        outline: none;
-        font-size: $font-size-base;
-        color: $dark;
-        border-bottom: 1px solid $gray-lighter;
-
-        &:focus + .input-line{
-          visibility: visible;
-          transform: scaleX(1);
-        }
-
-        &:focus {
-          &::placeholder {
-            color: $gray;
-          }
-        }
-
-        &::placeholder {
-          transition: color .25s ease-in;
-          color: $gray-light;
-        }
-      }
-
-      .input-line {
-        height: 2px;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        background-color: $primary;
-        visibility: hidden;
-        transform: scaleX(0);
-        transition: all .45s cubic-bezier(0.23, 1, 0.32, 1);
-        display: block;
-      }
+    .input-line {
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: $primary;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all .45s cubic-bezier(0.23, 1, 0.32, 1);
+      display: block;
     }
   }
 
@@ -152,9 +152,44 @@ $shadow-third-color: $gray-lighter !default;
     
     .btn-ok {color: $primary;}
   }
+}
 
-  
+@media all and (max-width: 640px) {
+  .alerty {
+    width: 280px;
+  }
+
+  .toasts .alerty {
+    width: 100%;
+    border-radius: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.alerty-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  z-index: $zindex-alerty;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  will-change: background-color;
+  transition: background-color .45s cubic-bezier(0.23, 1, 0.32, 1);
+
+  &.active {
+    background-color: rgba(0, 0, 0, .54);
+  }
+
   &.toasts {
+    align-items: flex-end;
+  }
+
+  &.toasts .alerty {
     height: $alerty-toasts-height;
     top: auto;
     bottom: 0;
@@ -179,7 +214,6 @@ $shadow-third-color: $gray-lighter !default;
       animation: slideOutDown .35s ease;
     }
 
-
     &.place-top {
       top: 0;
       bottom: auto;
@@ -192,39 +226,6 @@ $shadow-third-color: $gray-lighter !default;
         animation: slideOutUp .35s ease;
       }
     }
-
-  }
-}
-
-@media all and (max-width: 640px) {
-  .alerty {
-    width: 280px;
-  }
-
-  .alerty.toasts {
-    width: 100%;
-    border-radius: 0;
-    left: 0;
-    right: 0;
-  }
-}
-
-.alerty-container {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  z-index: $zindex-alerty;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  will-change: background-color;
-  transition: background-color .45s cubic-bezier(0.23, 1, 0.32, 1);
-
-  &.active {
-    background-color: rgba(0, 0, 0, .54);
   }
 }
 

@@ -28,7 +28,7 @@
       alerty.alert('操作已完成！', {title: '提示'}).then(() => $msg.innerHTML = 'ALERT OK!')
     }
     document.getElementById('test2').onclick = function () {
-      alerty.toasts('123', {bgColor: '#ccc', fontColor: '#000'}, function(){alert('toasts callback')})
+      alerty.toasts('消息已发送！').then(() => alert('abc'));
     }
     document.getElementById('test3').onclick = function () {
       alerty.confirm(
