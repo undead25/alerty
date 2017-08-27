@@ -13,7 +13,7 @@ export default class Alerty {
     inputValue: '',
     inputType: 'text',
     toastDuration: 2000
-  }
+  };
   // User options
   private options: Alerty.Options;
   // Modal type
@@ -35,7 +35,7 @@ export default class Alerty {
    * Alert
    * @param {string} msg - The message content
    * @param {Alerty.Options} - options
-   * @returns {Promise<any>} 
+   * @returns {Promise<any>}
    */
   public alert = (msg: string, opts: Alerty.Options): Promise<any> => this.init('alert', msg, opts);
 
@@ -43,7 +43,7 @@ export default class Alerty {
    * Confirm
    * @param {string} msg - The message content
    * @param {Alerty.Options} - options
-   * @returns {Promise<any>} 
+   * @returns {Promise<any>}
    */
   public confirm = (msg: string, opts: Alerty.Options): Promise<any> => this.init('confirm', msg, opts);
 
@@ -51,7 +51,7 @@ export default class Alerty {
    * Prompt
    * @param {string} msg - The message content
    * @param {Alerty.Options} - options
-   * @returns {Promise<any>} 
+   * @returns {Promise<any>}
    */
   public prompt = (msg: string, opts: Alerty.Options): Promise<any> => this.init('prompt', msg, opts);
 
@@ -59,7 +59,7 @@ export default class Alerty {
    * Toasts
    * @param {string} msg - The message content
    * @param {Alerty.Options} - options
-   * @returns {Promise<any>} 
+   * @returns {Promise<any>}
    */
   public toasts = (msg: string, opts: Alerty.Options): Promise<any> => this.init('toasts', msg, opts);
 
@@ -68,7 +68,7 @@ export default class Alerty {
    * @param {Alerty.ModalType} type - modal type
    * @param {string} msg - modal message content
    * @param {Alerty.Options} opts - user options
-   * @returns {Promise<any>} 
+   * @returns {Promise<any>}
    */
   private init(type: Alerty.ModalType, msg: string, opts: Alerty.Options): Promise<any> {
     this.type = type;
@@ -78,7 +78,7 @@ export default class Alerty {
     return new Promise((resolve, reject) => {
       this.resolve = resolve;
       this.reject = reject;
-    })
+    });
   }
 
   /**
@@ -109,7 +109,7 @@ export default class Alerty {
 
   /**
    * Returns the DOM element string for dialog
-   * @returns {string} 
+   * @returns {string}
    */
   private renderDOM(): string {
     const { options, type, msg } = this;
@@ -176,7 +176,7 @@ export default class Alerty {
     $btnCancel && $btnCancel.addEventListener('click', () => {
       this.close();
       this.reject && setTimeout(() => this.reject(), 200);
-    })
+    });
 
     // Handle mask close
     maskClosable && container.addEventListener('click', (e: Event) => {
@@ -211,15 +211,14 @@ export default class Alerty {
    */
   private close(): void {
     const { modal, container, resolve, reject } = this;
-    
     // animation for close using css
     modal.classList.remove('alerty-show');
     modal.classList.add('alerty-hide');
     container.classList.remove('active');
-    
-    // enable body's scroll 
+
+    // enable body's scroll
     document.body.classList.remove('no-scrolling');
-    
+
     setTimeout(() => {
       (container && container.parentNode) && container.parentNode.removeChild(container);
       // remove evet bind to body
