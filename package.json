@@ -1,6 +1,9 @@
 {
   "name": "alerty",
   "version": "0.0.1",
+  "scripts": {
+    "build": "gulp"
+  },
   "main": "alerty.js",
   "description": "A simple, light and pretty pure javascript for developing browser dialogs and notifications which is following Google's Material Design guidelines. Obviously, it is responsive and no need other library",
   "repository": {
@@ -31,10 +34,13 @@
     "gulp-jshint": "^2.0.1",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
+    "gulp-sass": "^3.2.1",
     "gulp-uglify": "^1.5.4",
     "jshint": "^2.9.2",
     "postcss-background-rgba": "^1.0.3",
     "postcss-color-rgba-fallback": "^2.2.0"
+  },
+  "engines": {
+    "node": "<= 8.7.0"
   }
 }

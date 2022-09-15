@@ -61,11 +61,11 @@
     addEvent: function(el, type, func) {
       if(el.addEventListener) {
         el.addEventListener(type, func, false);
-      } else if(el.attachEvent){ 
+      } else if(el.attachEvent){
         el.attachEvent('on' + type, func);
-      } else{ 
-        el['on' + type] = func; 
-      }  
+      } else{
+        el['on' + type] = func;
+      } 
     },
 
     /**
@@ -77,7 +77,7 @@
      *
      */
     removeEvent: function(el, type, func) {
-      if (el.removeEventListener){ 
+      if (el.removeEventListener){
         el.removeEventListener(type, func, false);
       } else if (el.detachEvent){
         el.detachEvent('on' + type, func);
@@ -119,7 +119,7 @@
 
     // private object for Alerty object inherit
     var Dialog = {
-      
+
       // static defaults params
       defaults: {
         okLabel: '\u786e\u5b9a',
@@ -148,7 +148,7 @@
 
 
 
-      /** 
+      /**
        * [Build the HTML contents]
        *
        * @param type {String}           -- get the dialog type to arrange the correspondent html content.
@@ -171,6 +171,7 @@
         // if previous modal is open, remove it and immediately callback
         if ($oldModal) {
           commonUse.removeElement($oldModal);
+          commonUse.removeElement(document.querySelector('.alerty-overlay'));
           var _callback = this.previousCallback;
           if (_callback) _callback();
         }
@@ -212,7 +213,7 @@
 
           if(opts && opts.inputType) $input.setAttribute('type', opts.inputType); // handle input type, such as 'password'
           if(opts && opts.inputPlaceholder) $input.setAttribute('placeholder', opts.inputPlaceholder); // handle input placeholder
-          if(opts && opts.inputValue) $input.setAttribute('value', opts.inputValue); // handle input default value 
+          if(opts && opts.inputValue) $input.setAttribute('value', opts.inputValue); // handle input default value
         }
 
         if (type === 'toasts') {
@@ -244,7 +245,7 @@
         this.bindEvent($modal, onOk, onCancel); // see next
       },
 
-      /** 
+      /**
        * [Bind event to dialog]
        *
        * @param $modal {Object}       -- modal node.
@@ -278,7 +279,7 @@
         }
       },
 
-      /** 
+      /**
        * [Close the actived modal and remove it]
        *
        * @param: $modal {Obejct}  -- modal element to remove.
@@ -295,7 +296,7 @@
         // remove alerty and other added elements
         setTimeout(function(){
           $overlay && commonUse.removeClass($overlay, 'active'), commonUse.removeClass(document.body, 'no-scrolling');
-          
+
           commonUse.removeElement($modal);
           commonUse.removeElement($overlay);
           if (callback) {
